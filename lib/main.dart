@@ -42,22 +42,27 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: false,
-        title: Text(
-          "Yamatching",
-          style: TextStyle(
-            fontFamily: 'SquarePeg-Regular',
-            fontSize: 30,
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
+          centerTitle: false,
+          title: Text(
+            "Yamatching",
+            style: TextStyle(
+              fontFamily: 'SquarePeg-Regular',
+              fontSize: 30,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
-      ),
+          actions: <Widget>[
+            Icon(
+              Icons.sunny,
+              size: 40,
+            ),
+          ]),
       body: Container(
         width: double.infinity,
         child: TextField(
           style: TextStyle(
-            fontFamily: 'SquarePeg-Regular',
+            fontFamily: 'KaiseiOpti-Bold',
             fontSize: 20,
             color: Colors.white,
             fontWeight: FontWeight.bold,
