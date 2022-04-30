@@ -30,13 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +65,15 @@ class _MyHomePageState extends State<MyHomePage> {
             hintText: '山名・キーワードで探す',
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.school), label: "test"),
+          BottomNavigationBarItem(icon: Icon(Icons.school), label: "test"),
+          BottomNavigationBarItem(icon: Icon(Icons.school), label: "test"),
+        ],
+        currentIndex: _currentIndex,
+        onTap: (Index) => setState(() => _currentIndex = Index),
       ),
     );
   }
