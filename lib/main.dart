@@ -46,8 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(
           "Yamatching",
           style: TextStyle(
-            fontFamily: 'WaterBrush',
-            fontSize: 20,
+            fontFamily: 'SquarePeg-Regular',
+            fontSize: 30,
             color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
@@ -56,6 +56,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         width: double.infinity,
         child: TextField(
+          style: TextStyle(
+            fontFamily: 'SquarePeg-Regular',
+            fontSize: 20,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
           decoration: InputDecoration(
             hintText: '山名・キーワードで探す',
           ),

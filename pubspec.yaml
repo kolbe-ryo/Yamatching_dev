@@ -51,7 +51,18 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  fonts:
+    - family: WaterBrush
+      fonts:
+        - asset: fonts/WaterBrush-Regular.ttf
 
+    - family: SquarePeg-Regular
+      fonts:
+        - asset: fonts/SquarePeg-Regular.ttf
+        
+    - family: KaiseiOpti-Bold
+      fonts:
+        - asset: fonts/KaiseiOpti-Bold.ttf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
