@@ -35,6 +35,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          elevation: 0,
           centerTitle: false,
           title: const Text(
             "Yamatching",
