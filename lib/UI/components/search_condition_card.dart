@@ -1,24 +1,54 @@
 import 'package:flutter/material.dart';
 import 'package:yamatching/constants/conatants.dart';
 
-class SearchConditionCard extends StatelessWidget {
+class SearchConditionCard extends StatefulWidget {
   const SearchConditionCard({Key? key}) : super(key: key);
 
   @override
+  State<SearchConditionCard> createState() => _SearchConditionCardState();
+}
+
+class _SearchConditionCardState extends State<SearchConditionCard> {
+  double _value = 0.0;
+
+  void _changeSlider(double e) => setState(() {
+        _value = e;
+      });
+
+  @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(bottom: kPadding),
-      //上と下に２０
-      child: Container(
-        height: 110,
-        decoration: BoxDecoration(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text("場所"),
+        Card(
           color: Colors.green,
-          borderRadius: BorderRadius.horizontal(
-            right: Radius.circular(20),
-            left: Radius.circular(20),
+          child: Column(
+            children: [
+              Text("県内"),
+              Row(
+                children: [
+                  Icon(Icons.house),
+                  SizedBox(
+                    width: 200,
+                    child: Slider(
+                      label: '${_value}',
+                      min: 0,
+                      max: 10,
+                      value: _value,
+                      activeColor: Colors.orange,
+                      inactiveColor: Colors.blueAccent,
+                      divisions: 10,
+                      onChanged: _changeSlider,
+                    ),
+                  ),
+                  Icon(Icons.airplanemode_active),
+                ],
+              )
+            ],
           ),
-        ),
-      ),
+        )
+      ],
     );
   }
 }

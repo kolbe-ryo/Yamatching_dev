@@ -24,6 +24,9 @@ class _SeachingBarState extends State<SeachingBar> {
           fontWeight: FontWeight.bold,
         ),
         decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
           hintText: '山名・キーワードで探す',
           fillColor: Colors.white,
           filled: true,

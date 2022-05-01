@@ -40,8 +40,8 @@ class _MainPageState extends State<MainPage> {
           title: const Text(
             "Yamatching",
             style: TextStyle(
-              fontFamily: 'SquarePeg-Regular',
               fontSize: 30,
+              fontFamily: 'SquarePeg-Regular',
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
