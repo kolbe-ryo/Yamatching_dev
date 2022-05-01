@@ -1,35 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:yamatching/UI/components/searching_bar.dart';
+import 'package:yamatching/constants/conatants.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const Yamatching());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Yamatching extends StatelessWidget {
+  const Yamatching({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Yamatching',
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MainPage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+class MainPage extends StatefulWidget {
+  const MainPage({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
 
   @override
@@ -37,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
           centerTitle: false,
-          title: Text(
+          title: const Text(
             "Yamatching",
             style: TextStyle(
               fontFamily: 'SquarePeg-Regular',
@@ -46,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          actions: <Widget>[
+          actions: const <Widget>[
             Icon(
               Icons.sunny,
               size: 40,
@@ -54,78 +53,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ]),
       body: Column(
         children: [
-          Container(
-            width: double.infinity,
-            child: TextField(
-              style: TextStyle(
-                fontFamily: 'KaiseiOpti-Bold',
-                fontSize: 20,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
-              decoration: InputDecoration(
-                hintText: '山名・キーワードで探す',
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              bottom: 25, //下に２０
-            ),
-            child: Container(
-              color: Colors.green,
-              height: 25,
-            ),
-          ),
-          Padding(
-            padding:
-                EdgeInsets.symmetric(vertical: 25, horizontal: 20), //上と下に２０
-            child: Container(
-              height: 110,
-              decoration: BoxDecoration(
-                color: Colors.green,
-                borderRadius: BorderRadius.horizontal(
-                  right: Radius.circular(20),
-                  left: Radius.circular(20),
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 25, horizontal: 20),
-            //上と下に２０
-            child: Container(
-              color: Colors.green,
-              height: 110,
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 25), //上と下に２０
-            child: Container(
-              color: Colors.green,
-              height: 110,
-            ),
-          ),
-          Align(
-            alignment: Alignment(1, 1),
-            child: ClipOval(
-              child: Material(
-                color: Colors.green,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(
-                    Icons.search,
-                    size: 40,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
-          )
+          SeachingBar(),
+          kBarCrassItems[_currentIndex],
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.school), label: "test"),
           BottomNavigationBarItem(icon: Icon(Icons.school), label: "test"),
           BottomNavigationBarItem(icon: Icon(Icons.school), label: "test"),
