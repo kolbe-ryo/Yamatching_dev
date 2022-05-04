@@ -60,9 +60,9 @@ class _MainPageState extends State<MainPage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.school), label: "test"),
-          BottomNavigationBarItem(icon: Icon(Icons.school), label: "test"),
-          BottomNavigationBarItem(icon: Icon(Icons.school), label: "test"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "test"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "test"),
+          BottomNavigationBarItem(icon: Icon(Icons.face), label: "test"),
         ],
         currentIndex: _currentIndex,
         onTap: (Index) => setState(() => _currentIndex = Index),
