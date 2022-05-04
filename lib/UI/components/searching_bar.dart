@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yamatching/constants/conatants.dart';
+import 'package:yamatching/constants/constants.dart';
 
 class SeachingBar extends StatefulWidget {
   const SeachingBar({Key? key}) : super(key: key);

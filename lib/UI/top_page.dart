@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yamatching/UI/components/search_condition_card.dart';
-import 'package:yamatching/constants/conatants.dart';
+import 'package:yamatching/constants/constants.dart';
 
 class Toppage extends StatefulWidget {
   const Toppage({Key? key}) : super(key: key);

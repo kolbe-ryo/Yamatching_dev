@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yamatching/constants/conatants.dart';
+import 'package:yamatching/constants/constants.dart';
 
 class SearchConditionCard extends StatefulWidget {
   const SearchConditionCard({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yamatching/UI/components/searching_bar.dart';
-import 'package:yamatching/constants/conatants.dart';
+import 'package:yamatching/constants/constants.dart';
 
 void main() => runApp(const Yamatching());
 
