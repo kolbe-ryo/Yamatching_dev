@@ -60,9 +60,9 @@ class _MainPageState extends State<MainPage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "test"),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "test"),
-          BottomNavigationBarItem(icon: Icon(Icons.face), label: "test"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "ホーム"),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "お気に入り"),
+          BottomNavigationBarItem(icon: Icon(Icons.face), label: "マイページ"),
         ],
         currentIndex: _currentIndex,
         onTap: (Index) => setState(() => _currentIndex = Index),
